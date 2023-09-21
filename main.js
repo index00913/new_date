@@ -4,7 +4,9 @@
 */
 const [hr, m, s] = document.querySelectorAll('h1 span');
 
-setInterval(() => {
+setInterval(() => {}, 1000);
+
+function setTime() {
 	const now = new Date();
 	const hours = now.getHours();
 	const min = now.getMinutes();
@@ -12,7 +14,7 @@ setInterval(() => {
 	hr.innerText = setNumbers(setHours(hours));
 	m.innerText = setNumbers(min);
 	s.innerText = setNumbers(sec);
-}, 1000);
+}
 
 function setNumbers(num) {
 	num < 10 && (num = '0' + num);
